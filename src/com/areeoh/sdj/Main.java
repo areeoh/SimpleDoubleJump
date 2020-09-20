@@ -35,13 +35,15 @@ public class Main extends JavaPlugin {
         final double doubleYJumpPower = getConfig().getDouble("Simple-Double-Jump.Double-Jump-Y-Power");
         final Sound doubleJumpNoise = Sound.valueOf(getConfig().getString("Simple-Double-Jump.Double-Jump-Noise"));
         final double crouchPower = getConfig().getDouble("Simple-Double-Jump.Crouch-Power");
-        final double crouchYPower = getConfig().getDouble("Simple-Double-Jump.Double-Jump-Y-Power");
+        final double crouchYPower = getConfig().getDouble("Simple-Double-Jump.Crouch-Y-Power");
         final Sound crouchNoise = Sound.valueOf(getConfig().getString("Simple-Double-Jump.Crouch-Noise"));
         final String reloadPermission = getConfig().getString("Simple-Double-Jump.Reload-Permission");
 
         this.options = new Options(enabled, doubleJumpPower, doubleYJumpPower, doubleJumpNoise, crouchPower, crouchYPower, crouchNoise, reloadPermission);
 
-        doubleJumpHandler = new DoubleJumpHandler(this);
+        if(doubleJumpHandler == null) {
+            doubleJumpHandler = new DoubleJumpHandler(this);
+        }
         if(options.isEnabled()) {
             Bukkit.getServer().getPluginManager().registerEvents(doubleJumpHandler, this);
             for (Player online : Bukkit.getOnlinePlayers()) {
