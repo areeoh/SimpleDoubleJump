@@ -1,0 +1,9 @@
+name: SimpleDoubleJump
+main: com.areeoh.sdj.Main
+description: SimpleDoubleJump is a simple plugin that helps with velocity in lobbies and other various things. Double jump by pressing space bar and sneak in mid air to shoot forward.
+website: www.github.com/areeoh
+version: 1.0
+author: Areeoh
+commands:
+  simpledoublejump:
+    aliases: [sdj]

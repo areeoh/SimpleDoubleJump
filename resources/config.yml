@@ -1,0 +1,9 @@
+Simple-Double-Jump:
+  Enabled: true
+  Double-Jump-Power: 2
+  Double-Jump-Y-Power: 1.3
+  Double-Jump-Noise: ANVIL_LAND
+  Crouch-Power: 2
+  Crouch-Y-Power: 2
+  Crouch-Noise: NOTE_PLING
+  Reload-Permission: sdj.reload
